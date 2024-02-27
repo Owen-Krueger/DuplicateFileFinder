@@ -1,4 +1,7 @@
-name: .NET
+name: Release
+
+permissions:
+  contents: write
 
 on:
   release:
