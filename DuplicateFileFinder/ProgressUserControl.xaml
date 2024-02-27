@@ -12,8 +12,8 @@
         </Grid.RowDefinitions>
         
         <StackPanel>
-            <fa:ImageAwesome Name="IconProgress" Icon="CircleOutlineNotch" Spin="true" SpinDuration="5" Width="20" Visibility="Visible" />
             <TextBlock Name="TextProgress" Text="Finding Duplicate Files..." HorizontalAlignment="Center" Margin="10" />
+            <ProgressBar Name="BarProgress" IsIndeterminate="True" Margin="10"/>
         </StackPanel>
     </Grid>
 </UserControl>

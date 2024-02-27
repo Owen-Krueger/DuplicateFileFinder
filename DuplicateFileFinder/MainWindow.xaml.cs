@@ -24,7 +24,7 @@ public partial class MainWindow : Window
             duplicateFiles = progressControl.GetDuplicateFiles();
         });
 
-        progressControl.IconProgress.Visibility = Visibility.Hidden;
+        progressControl.BarProgress.Visibility = Visibility.Hidden;
         progressControl.TextProgress.Text = "Duplicates found! See Results window.";
         var resultsWindow = new ResultsWindow(duplicateFiles);
         resultsWindow.Show();
