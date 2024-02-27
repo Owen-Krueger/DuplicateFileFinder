@@ -16,7 +16,7 @@ jobs:
 
       - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.0
+          dotnet-version: 8.0.x
 
       - run: dotnet restore ${{ env.PROJECT_PATH }}
 
@@ -32,7 +32,7 @@ jobs:
           tag_name: ${{ github.ref }}
           release_name: ${{ github.ref }}
 
-      - uses: csexton/release-asset-action@v2
+      - uses: csexton/release-asset-action@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           pattern: DuplicateFileFinder/bin/Release/net8.0-windows/win-x64/publish/*.exe
