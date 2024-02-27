@@ -1,0 +1,27 @@
+﻿<Window x:Class="DuplicateFileFinder.ResultsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Results" Height="450" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Row="0" Grid.Column="0"><Bold>File Names</Bold></Label>
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+            <Label><Bold>Files</Bold></Label>
+            <Label>(Double Click to open in File Explorer)</Label>
+        </StackPanel>
+        
+        <ListBox Name="ListFileNames" Grid.Row="1" Grid.Column="0" SelectionChanged="ListFileNames_OnSelected" />
+        <ListBox Name="ListFileDetails" Grid.Row="1" Grid.Column="1" MouseDoubleClick="ListFileDetails_OnDoubleClicked" />
+    </Grid>
+</Window>
