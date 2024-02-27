@@ -7,6 +7,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{60AC9086-CF7E-4566-9603-DCEAE870BE38}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\release.yaml = .github\workflows\release.yaml
+		.github\workflows\build.yaml = .github\workflows\build.yaml
 	EndProjectSection
 EndProject
 Global
